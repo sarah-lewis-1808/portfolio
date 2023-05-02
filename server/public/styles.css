@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:monospace
+}
+
+.app {  
+  background-color: #000000e5;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header {
+  margin-top: 5em;
+  position: fixed;
+  width:100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-items: center;
+  background-color: #AB96DB;
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: 400;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: black;
+  padding: 0.5em;
+  margin: 0.2em;
+  margin-bottom: 0;
+}
+
+h2{
+	font-size: 1.5em;
+  color: #CCF281;
+  font-weight: 600;
+  padding: 0.5em;
+  margin: 0.2em;
+}
+
+
+/* ---------------- Navbar and burger menu ------------------ */
+
+nav {
+  position:fixed;
+  margin-top: 0;
+  width: 100%;
+  height: 5em;
+  background-color: #4832D5;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  padding: 1em;
+  box-shadow: 0px 5px 10px black
+}
+
+nav a {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4em;
+
+  text-align: center;
+  text-decoration: none;
+  color:aliceblue;
+}
+
+nav a:hover {
+    font-weight: 400;
+    text-shadow: 0 0 10px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 2px #65fe28, 2px 2px 2px #14802a;
+    color: aliceblue;
+    animation: neon 1s 1;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 10px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 2px #65fe28, 2px 2px 2px #14802a;
+    color: aliceblue;
+  }
+  5% {
+    text-shadow: 0 0 2px #0b4980, 0 0 5px #0b4980, 0 0 5px #0b4980, 0 0 5px #0b4980, 0 0 2px #0b4980, 4px 4px 2px #40340a;
+    color: #EC449Bec;
+  }
+  15%{
+    text-shadow: 0 0 10px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 2px #65fe28, 2px 2px 2px #14802a;
+    color: aliceblue;
+  }
+  50% {
+    text-shadow: 0 0 2px #0b4980, 0 0 5px #0b4980, 0 0 5px #0b4980, 0 0 5px #0b4980, 0 0 2px #0b4980, 4px 4px 2px #40340a;
+    color: #EC449Bec;
+  }
+  55% {
+    text-shadow: 0 0 10px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 2px #65fe28, 2px 2px 2px #14802a;
+    color: aliceblue;
+  }
+  60% {
+    text-shadow: 0 0 2px #0b4980, 0 0 5px #0b4980, 0 0 5px #0b4980, 0 0 5px #0b4980, 0 0 2px #0b4980, 4px 4px 2px #40340a;
+    color: #EC449Bec;
+  }
+  75% {
+    text-shadow: 0 0 10px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 2px #65fe28, 2px 2px 2px #14802a;
+    color: aliceblue;
+  }
+  90% {
+    text-shadow: 0 0 2px #0b4980, 0 0 5px #0b4980, 0 0 5px #0b4980, 0 0 5px #0b4980, 0 0 2px #0b4980, 4px 4px 2px #40340a;
+    color: #EC449Bec;
+  }
+  100% {
+    text-shadow: 0 0 10px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 2px #65fe28, 2px 2px 2px #14802a;
+    color: aliceblue;
+  }
+}
+
+.burger-menu {
+  height: 100%;
+  width: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger-bar {
+  width: 3em;
+  height: 0.5em;
+  background-color: #99f444ec;
+  border-radius: 0.5em;
+  box-shadow: 1px 3px 2px #EC449Bec;
+}
+
+/* ------------- sliding menu ------------------ */
+menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: inherit;
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1){
+  transform: rotate(45deg) translate(0.75em, 1.25em);
+  transition: ease-out 0.5s;
+  box-shadow: 4px 4px 2px #CCF281;
+  background-color: #EC449B;
+}
+.burger-bar.clicked:nth-child(2){
+  background-color: #CCF281;
+  transform: rotate(45deg) translate(-0.11em, 0.36em);
+  transition: ease-out 0.5s;
+  z-index: 1;
+  box-shadow: none;
+  background-color: #EC449B;
+}
+.burger-bar.clicked:nth-child(3){
+  transform: rotate(135deg) translate(-0.5em, 1em);
+  transition: ease-out 0.5s;
+  box-shadow: 3px -4px 2px #CCF281;
+  background-color: #EC449B;
+}
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
