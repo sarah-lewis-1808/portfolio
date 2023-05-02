@@ -20,22 +20,20 @@ const Navbar = () => {
   }
 
   return (
-    <div>
-      <nav>
-        <div
-          aria-label="burger toggle"
-          className="burger-menu"
-          onClick={updateMenu}
-        >
-          <div className={burger_class}></div>
-          <div className={burger_class}></div>
-          <div className={burger_class}></div>
-        </div>
-        <div className={menu_class}>
-          <MenuItems />
-        </div>
-      </nav>
-    </div>
+    <nav>
+      <div
+        aria-label="burger toggle"
+        className="burger-menu"
+        onClick={updateMenu}
+      >
+        <div className={burger_class}></div>
+        <div className={burger_class}></div>
+        <div className={burger_class}></div>
+      </div>
+      <div className={menu_class}>
+        <MenuItems />
+      </div>
+    </nav>
   )
 }
 
