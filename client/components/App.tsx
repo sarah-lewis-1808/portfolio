@@ -14,14 +14,14 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <div className="app">
         <Header />
-        <Navbar />
-        <ul>
+        {/* <ul>
           {fruits.map((fruit) => (
             <li key={fruit}>{fruit}</li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </>
   )
