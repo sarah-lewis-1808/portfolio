@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../hooks'
 import { fetchFruits } from '../slices/fruits'
+import Navbar from './Navbar'
+import Header from './Header'
 
 function App() {
   const fruits = useAppSelector((state) => state.fruits)
@@ -13,7 +15,8 @@ function App() {
   return (
     <>
       <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
+        <Header />
+        <Navbar />
         <ul>
           {fruits.map((fruit) => (
             <li key={fruit}>{fruit}</li>
