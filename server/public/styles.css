@@ -1,22 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 
 * {
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family:monospace
 }
 
 .app {  
-  background-image: linear-gradient(#060413d7, #050219d7, #000000);
+  background-image: linear-gradient(to bottom right, #060413d7, #050219d7, #000000, #000000);
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   width: 100%;
 }
 
 .body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 90%;
   height: 100vmax;
   margin-bottom: 2%;
@@ -28,34 +31,35 @@
   width:100%;
   height: fit-content;
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-items: center;
+  flex-direction: column;
+  justify-items: left;
   background-color: #AB96DB;
 }
 
 h1 {
 	font-size: 3em;
-	font-weight: 400;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 300;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	color: black;
-  padding: 0.5em;
-  margin: 0.2em;
-  margin-bottom: 0;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-left: 40px;
+  padding-bottom: 0px;
 }
 
 h2{
 	font-size: 1.5em;
   color: #CCF281;
   font-weight: 600;
-  padding: 0.5em;
-  margin: 0.2em;
+ padding-left: 40px;
+ padding-top:5px;
+ padding-bottom:10px;
 }
 
 
 /* ---------------- Navbar and burger menu ------------------ */
 
-.nav.show {
+nav.show {
   display: flex;
   align-content: center;
   justify-content: flex-start;
@@ -74,14 +78,16 @@ h2{
   transition-duration: 500ms;
 }
 
-.nav.down {
-  top: -5rem;
+nav.down {
+  display: hidden;
 }
 
-.nav a {
+nav a {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 200;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 1.4em;
@@ -90,7 +96,7 @@ h2{
   color:aliceblue;
 }
 
-.nav a:hover {
+nav a:hover {
     font-weight: 400;
     text-shadow: 0 0 10px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 20px #EC449Bec, 0 0 2px #65fe28, 2px 2px 2px #14802a;
     color: aliceblue;
@@ -157,8 +163,8 @@ h2{
 /* ------------- sliding menu ------------------ */
 menu {
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
+  flex-wrap: wrap;
 }
 
 .hidden {

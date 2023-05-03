@@ -5,6 +5,7 @@ import Navbar from './Navbar'
 import Header from './Header'
 import Projects from './Projects'
 import About from './About'
+import Contact from './Contact'
 
 function App() {
   const fruits = useAppSelector((state) => state.fruits)
@@ -21,6 +22,7 @@ function App() {
       <div className="app">
         <div className="body">
           <About />
+          <Contact />
           <Projects />
         </div>
         {/* <ul>
