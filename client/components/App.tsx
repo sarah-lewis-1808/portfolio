@@ -3,6 +3,8 @@ import { useAppDispatch, useAppSelector } from '../hooks'
 import { fetchFruits } from '../slices/fruits'
 import Navbar from './Navbar'
 import Header from './Header'
+import Projects from './Projects'
+import About from './About'
 
 function App() {
   const fruits = useAppSelector((state) => state.fruits)
@@ -15,8 +17,12 @@ function App() {
   return (
     <>
       <Navbar />
+      <Header />
       <div className="app">
-        <Header />
+        <div className="body">
+          <About />
+          <Projects />
+        </div>
         {/* <ul>
           {fruits.map((fruit) => (
             <li key={fruit}>{fruit}</li>
