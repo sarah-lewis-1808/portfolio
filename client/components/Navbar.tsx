@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import MenuItems from './MenuItems'
+import { useScrollDirection } from '../hooks'
 
 const Navbar = () => {
+  const scrollDirection = useScrollDirection()
+
   // to change burger classes
   const [burger_class, setBurgerClass] = useState('burger-bar unclicked')
   const [menu_class, setMenuClass] = useState('menu hidden')
@@ -20,20 +23,22 @@ const Navbar = () => {
   }
 
   return (
-    <nav>
-      <div
-        aria-label="burger toggle"
-        className="burger-menu"
-        onClick={updateMenu}
-      >
-        <div className={burger_class}></div>
-        <div className={burger_class}></div>
-        <div className={burger_class}></div>
-      </div>
-      <div className={menu_class}>
-        <MenuItems />
-      </div>
-    </nav>
+    <>
+      <nav className={`nav ${scrollDirection === 'down' ? 'hide' : 'show'}`}>
+        <div
+          aria-label="burger toggle"
+          className="burger-menu"
+          onClick={updateMenu}
+        >
+          <div className={burger_class}></div>
+          <div className={burger_class}></div>
+          <div className={burger_class}></div>
+        </div>
+        <div className={menu_class}>
+          <MenuItems />
+        </div>
+      </nav>
+    </>
   )
 }
 
