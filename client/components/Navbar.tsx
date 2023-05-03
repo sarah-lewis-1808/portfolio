@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`nav ${scrollDirection === 'down' ? 'hide' : 'show'}`}>
+      <nav className={`${scrollDirection === 'down' ? 'hide' : 'show'}`}>
         <div
           aria-label="burger toggle"
           className="burger-menu"

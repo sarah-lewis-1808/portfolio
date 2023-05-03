@@ -7,6 +7,9 @@ const About = () => {
         <div>
           <img src="/images/catface.jpg" alt="picture of sarah with a cat" />
           <p>{`Hi, I'm Sarah`}</p>
+          <p>{`Currently looking for a development role`}</p>
+          <p>{'full time or part time'}</p>
+          <p>{`based in Tāmaki Makaurau, Auckland`}</p>
         </div>
       </section>
     </>
