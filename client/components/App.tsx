@@ -17,6 +17,9 @@ function App() {
 
   return (
     <>
+      <article>
+        <div className="article">This portfolio is a work in progress</div>
+      </article>
       <Navbar />
       <Header />
       <div className="app">
