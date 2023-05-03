@@ -26,6 +26,7 @@ const Navbar = () => {
     <>
       <nav className={`${scrollDirection === 'down' ? 'hide' : 'show'}`}>
         <div
+          role="button"
           aria-label="burger toggle"
           className="burger-menu"
           onClick={updateMenu}

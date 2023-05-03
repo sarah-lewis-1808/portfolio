@@ -4,8 +4,8 @@ const Projects = () => {
   return (
     <>
       <section id="projects">
+        <div className="project">SIMS Scribble98</div>
         <div className="project">PORTFOLIO</div>
-        <div className="project">Scribble98</div>
       </section>
     </>
   )
