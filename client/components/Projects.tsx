@@ -4,8 +4,39 @@ const Projects = () => {
   return (
     <>
       <section id="projects">
-        <div className="project">SIMS Scribble98</div>
-        <div className="project">PORTFOLIO</div>
+        <div className="project">
+          <a
+            href="https://github.com/sarah-lewis-1808/sims-final-project/tree/sarah-lewis-1808-patch-1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>SIMS Scribble98</h3>
+          </a>
+          <p>
+            Collaborative drawing game co-developed as part of Dev Academy final
+            project
+          </p>
+        </div>
+        <div className="project">
+          <a
+            href="https://www.figma.com/file/1A1LD0UUwydAiu5fTh33HT/Untitled?node-id=2%3A597&t=OxdMVuiifidvObmG-1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>PORTFOLIO</h3>
+          </a>
+          <p>Check out the plans for this portfolio</p>
+        </div>
+        <div className="project">
+          <a
+            href="https://sarah-todo-fullstack.devacademy.online/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>TODO FULL STACK</h3>
+          </a>
+          <p>My first full stack project deployment</p>
+        </div>
       </section>
     </>
   )
