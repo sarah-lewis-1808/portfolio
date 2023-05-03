@@ -5,6 +5,16 @@
   box-sizing: border-box;
   font-family:monospace
 }
+.app {  
+  background-image: linear-gradient(to bottom right, #060413d7, #050219d7, #000000, #000000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  margin-bottom: 0;
+}
 
   article {
   width: 100%;
@@ -14,18 +24,9 @@
 }
 
 .article {
-  color:azure;
-  animation: banner 10s linear 0s infinite;
   white-space: nowrap;
   font-size: larger;
-}
-
-article a {
-  text-decoration: none;
-  font-size: larger;
-  font-weight: 800;
-  color: #CCF281;
-  
+  animation: banner 10s linear 0s infinite;
 }
 
 @keyframes banner {
@@ -33,24 +34,11 @@ article a {
     100%{transform: translateX(-50vh)}
 }
 
-.app {  
-  background-image: linear-gradient(to bottom right, #060413d7, #050219d7, #000000, #000000);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  width: 100%;
-}
-
-.body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-  height: 100vmax;
-  margin-bottom: 2%;
-  border: 4px solid white;
+article a {
+  text-decoration: none;
+  font-size: larger;
+  font-weight: 800;
+  color: #CCF281;
 }
 
 #header {
@@ -233,44 +221,84 @@ menu {
 
 /* -------------------ABOUT -------------------*/
 
-.about {
+#about {
   display: flex;
-  justify-items: center;
-  flex-direction: row;
-  width: 90%;
-  border: 4px solid white;
-  background-color: whitesmoke;
-  font-size: 1em;
-  object-fit: contain;
+  flex-flow: row wrap;
+  margin-top: 4em;
+  width: 70%;
+  justify-content: center;
+  font-size: 2em;
+  padding: 5px;
 }
 
-.about img {
+.about img { 
+  border-radius: 4%;
+  box-shadow:-15px -15px #4832D5;
   width: 10em;
-  height: auto;
+  height: fit-content;
+}
+
+.about-me-text{
+  display: flex;
+  flex-flow: column wrap;
+  
+  color:whitesmoke;
+  padding: 10px;
+  justify-content: space-between;
+  min-width: 20vmax;
+}
+
+.about-me-text p, .about-me-text h3 {
+  font-size: auto;
+  padding: 8px;
+  font-weight: 200;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.about-me-text h3{
+  color:#EC449B;
 }
 
 /* -------------------PROJECTS---------------- */
 
 #projects{
   display: flex;
-  flex-direction: column;
-  width: 90%;
+  flex-direction: row;
+  width: 70%;
   align-items: center;
-  border: 4px solid white;
-  
+  margin-top: 7em;
+  margin-bottom: 7em;
+  /* border: 4px solid white; */
 }
 
 .project {
-  width: 80%;
-  height: 100px;
-  border: 4px solid rgba(228, 26, 26, 0.521);
+  margin: 2%;
+  width: 100%;
+  height: 12em;
+  /* font-size: 2em; */
+  background-color: #ab96db95;
+  border-radius: 10%;
+  padding: 2%;
+  box-shadow:-15px -15px #CCF281;
+  font-size: 1.5em;
+}
+
+.project h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: #EC449B;
+}
+
+.project a {
+  text-decoration: none
 }
 
 /* -------------------CONTACT------------------- */
 
-.contact{
+.contact {
   position:fixed;
-  left: 20px;
+  right: 20px;
   top: 35%;
   height: 100vmax;
   display: flex;
