@@ -313,3 +313,21 @@ menu {
   width: 3em;
   height: auto;
 }
+
+/* ---------------ANIMATION------------- */
+
+#zebra-ill {
+  position: relative;
+  min-height: 650px;
+  max-width: 500px;
+}
+
+.zebraimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  perspective: 600px;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  width: 100%;
+  }
