@@ -1,4 +1,8 @@
+import { getProjects } from '../apis/projects'
+
 const Projects = () => {
+  const projects = getProjects()
+
   return (
     <>
       <section id="projects">

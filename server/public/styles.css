@@ -5,15 +5,21 @@
   box-sizing: border-box;
   font-family:monospace
 }
+:root {
+  --bgcolor:#000000
+}
+
 .app {  
-  background-image: linear-gradient(to bottom right, #060413d7, #050219d7, #000000, #000000);
+  background-color: var(--bgcolor);
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
   min-height: 100vh;
   width: 100%;
-  margin-bottom: 0;
+  min-width: 40vh;
+  margin: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
   article {
@@ -34,25 +40,27 @@
     100%{transform: translateX(-50vh)}
 }
 
-article a {
+a {
   text-decoration: none;
+}
+
+.article p {
   font-size: larger;
   font-weight: 800;
-  color: #CCF281;
+  color: var(#CCF281);
+  mix-blend-mode: color-dodge;
 }
 
 #header {
-  position: sticky;
   width:100%;
-  height: 30vh;
   display: flex;
   flex-direction: column;
-  justify-items: left;
   background-color: #AB96DB;
+  padding: 5%;
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 4em;
 	font-weight: 300;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	color: black;
@@ -75,38 +83,30 @@ h2{
 /* ---------------- Navbar and burger menu ------------------ */
 
 nav.show {
-  display: flex;
-  align-content: center;
-  justify-content: flex-start;
-  z-index: 1;
-  position:sticky;
-  top: 0;
-  width: 100%;
-  height: 5em;
-
-  background-color: #4832D5;
+  display:flex;
+  flex-flow: row wrap;
+  position:fixed;
+  align-items: center;
+  top: 10px;
+  left: 10px;
+  /* background-color: #4832D5; */
   padding: 1em;
-  box-shadow: 0px 5px 10px black;
-
+  /* box-shadow: 0px 5px 10px black; */
   transition-property: all; 
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
 
-nav.down {
+nav.hide {
   display: none;
 }
 
 nav a {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 1.4em;
-  text-align: center;
+  padding: 1em;
   text-decoration: none;
   color:aliceblue;
 }
@@ -160,11 +160,10 @@ nav a:hover {
 
 /* --------------burger menu toggle icon------------------ */
 .burger-menu {
-  height: 100%;
+  height: 3em;
   width: 3em;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: space-between;
   cursor: pointer;
 }
@@ -178,21 +177,18 @@ nav a:hover {
 }
 
 /* ------------- menu items ------------------ */
-menu {
-  display: flex;
-  flex-direction: column; 
-  flex-wrap: wrap;
-}
-
-.hidden {
+.menu.hidden {
   display: none;
 }
-.visible {
-  display: inherit;
+.menu.visible {
+  display: flex;
+  flex-flow: row wrap;
+  height:fit-content
 }
 
 /* ----- nav animations--------- */
-/* clicked */
+
+/* burger cross */
 .burger-bar.clicked:nth-child(1){
   transform: rotate(45deg) translate(0.75em, 1.25em);
   transition: ease-out 0.5s;
@@ -200,12 +196,11 @@ menu {
   background-color: #EC449B;
 }
 .burger-bar.clicked:nth-child(2){
-  background-color: #CCF281;
   transform: rotate(45deg) translate(-0.11em, 0.36em);
   transition: ease-out 0.5s;
-  z-index: 1;
   box-shadow: none;
   background-color: #EC449B;
+  z-index: 1;
 }
 .burger-bar.clicked:nth-child(3){
   transform: rotate(135deg) translate(-0.5em, 1em);
@@ -213,7 +208,8 @@ menu {
   box-shadow: 3px -4px 2px #CCF281;
   background-color: #EC449B;
 }
-/* unclicked */
+
+/* burger lines */
 .burger-bar.unclicked {
   transform: rotate(0) translate(0);
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;

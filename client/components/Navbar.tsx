@@ -6,6 +6,8 @@ const Navbar = () => {
   const scrollDirection = useScrollDirection()
 
   // to change burger classes
+
+  //
   const [burger_class, setBurgerClass] = useState('burger-bar unclicked')
   const [menu_class, setMenuClass] = useState('menu hidden')
   const [isMenuClicked, setIsMenuClicked] = useState(false)
@@ -28,7 +30,7 @@ const Navbar = () => {
         <div
           role="button"
           aria-label="burger toggle"
-          className="burger-menu"
+          className="burger-menu "
           onClick={updateMenu}
         >
           <div className={burger_class}></div>
