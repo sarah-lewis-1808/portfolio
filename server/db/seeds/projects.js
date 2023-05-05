@@ -11,7 +11,7 @@ exports.seed = async function (knex) {
       name: 'SIMS Scribble98',
       intro:
         'Collaborative drawing game co-developed as part of Dev Academy final project',
-      link: '',
+      link: 'https://sims-scribble98.netlify.app/',
       image: 'images/SIMS-Scribble98.png',
       reflection: '',
     },
@@ -19,7 +19,7 @@ exports.seed = async function (knex) {
       id: 2,
       name: 'Portfolio',
       intro: 'Check out the plans for this portfolio',
-      link: '',
+      link: '#',
       image: 'image/portfolio.png',
       reflection:
         'Creating a portfolio to show my skills and experience has been really fun. I have really enjoyed the creative freedom and possibilities to explore new tech.',
@@ -28,7 +28,7 @@ exports.seed = async function (knex) {
       id: 3,
       name: 'Todo Full Stack',
       intro: 'My first full stack project deployment',
-      link: '',
+      link: 'https://sarah-todo-fullstack.devacademy.online/',
       image: 'images/todo-fullstack.png',
       reflection:
         'The aim of this project was to set up a full stack application and deploy to the web.',
