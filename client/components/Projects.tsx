@@ -13,7 +13,7 @@ const Projects = () => {
             project
           </p>
           <a
-            href="https://github.com/sarah-lewis-1808/sims-final-project/tree/sarah-lewis-1808-patch-1"
+            href="https://sims-scribble98.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
