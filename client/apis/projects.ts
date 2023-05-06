@@ -1,8 +1,10 @@
 import request from 'superagent'
+import { Project } from '../../models/Project'
 
 const rootUrl = '/api/v1'
 
-export async function getProjects(): Promise<string[]> {
+export async function getProjects(): Promise<Project[]> {
   const res = await request.get(rootUrl + '/projects')
-  return res.body.projects
+  console.log(res.body)
+  return res.body
 }
