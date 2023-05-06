@@ -8,3 +8,14 @@ export async function getProjects(): Promise<Project[]> {
   console.log(res.body)
   return res.body
 }
+
+export async function addProject(
+  newProject: Project,
+  token: string
+): Promise<Project> {
+  const res = await request
+    .post('${rootUrl}/projects')
+    .set('Authorization', `Bearer ${token}`)
+    .send(newProject)
+  return res.body
+}

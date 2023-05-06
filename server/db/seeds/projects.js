@@ -8,6 +8,7 @@ exports.seed = async function (knex) {
   await knex('projects').insert([
     {
       id: 1,
+      auth: '',
       name: 'SIMS Scribble98',
       intro:
         'Collaborative drawing game co-developed as part of Dev Academy final project',
@@ -17,6 +18,7 @@ exports.seed = async function (knex) {
     },
     {
       id: 2,
+      auth: '',
       name: 'Portfolio',
       intro: 'Check out the plans for this portfolio',
       link: '#',
@@ -26,6 +28,7 @@ exports.seed = async function (knex) {
     },
     {
       id: 3,
+      auth: '',
       name: 'Todo Full Stack',
       intro: 'My first full stack project deployment',
       link: 'https://sarah-todo-fullstack.devacademy.online/',
