@@ -14,7 +14,7 @@ const Projects = () => {
   }
 
   if (error) {
-    return <div>Error: error</div>
+    return <div>Error</div>
   }
 
   return (
