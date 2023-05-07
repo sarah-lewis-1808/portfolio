@@ -18,9 +18,7 @@ const App = () => {
         <Projects />
         <Banner />
         <Routes>
-          <Route path="/admin">
-            <Admin />
-          </Route>
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </div>
     </>

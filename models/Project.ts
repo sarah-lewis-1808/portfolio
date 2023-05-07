@@ -7,6 +7,6 @@ export interface Project {
   reflection: string
 }
 
-// export interface FullProject extends Project {
-//   id: number
-// }
+export interface FullProject extends Project {
+  id: number
+}

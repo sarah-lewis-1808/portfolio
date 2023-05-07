@@ -5,7 +5,7 @@ import type { JwtPayload } from 'jsonwebtoken'
 import jwks from 'jwks-rsa'
 
 const domain = 'https://dev-ty7ee0rngw3ifoyu.us.auth0.com'
-const audience = 'https://sarah-lewis.netlify.app/admin'
+const audience = 'https://sarah-lewis.netlify.app'
 
 const checkJwt = jwt({
   secret: jwks.expressJwtSecret({

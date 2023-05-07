@@ -46,6 +46,7 @@
     "jwks-rsa": "^3.0.1",
     "knex": "^2.3.0",
     "pg": "^8.8.0",
+    "react-query": "^3.39.3",
     "scrollmagic": "^2.0.8",
     "sqlite3": "^5.1.2",
     "superagent": "7.1.1"

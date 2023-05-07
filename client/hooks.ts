@@ -1,10 +1,5 @@
 // eslint-disable-next-line import/named
-import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
-import type { AppDispatch, RootState } from './store'
 import { useEffect, useState } from 'react'
-
-export const useAppDispatch: () => AppDispatch = useDispatch
-export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 
 export function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState('up')

@@ -1,27 +1,32 @@
-import { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../hooks'
-import { fetchProjects } from '../slices/projects'
+import { useQuery } from 'react-query'
+import { getProjects } from '../apis/projects'
+import { Project } from '../../models/Project'
 
 const Projects = () => {
-  const projects = useAppSelector((state) => state.projects)
-  const dispatch = useAppDispatch()
+  const {
+    data: projects,
+    isLoading,
+    error,
+  } = useQuery<Project[]>('projects', getProjects)
 
-  useEffect(() => {
-    dispatch(fetchProjects())
-  }, [])
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+
+  if (error) {
+    return <div>Error: error</div>
+  }
 
   return (
     <section id="projects">
-      {projects.map((project, index) => (
-        <>
-          <div className="project">
-            <h3 key={index}>{project.name}</h3>
-            <p key={index}>{project.intro}</p>
-            <a href={project.link}>
-              <button>Check it out</button>
-            </a>
-          </div>
-        </>
+      {projects?.map((project, index) => (
+        <div key={index} className="project">
+          <h3 key={project.name}>{project.name}</h3>
+          <p key={project.intro}>{project.intro}</p>
+          <a key={project.link} href={project.link}>
+            <button key={`${project.name} button`}>Check it out</button>
+          </a>
+        </div>
       ))}
     </section>
   )
