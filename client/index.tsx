@@ -10,17 +10,17 @@ const queryClient = new QueryClient()
 
 document.addEventListener('DOMContentLoaded', () => {
   createRoot(document.getElementById('app') as HTMLElement).render(
-    <Auth0Provider
-      domain="dev-ty7ee0rngw3ifoyu.us.auth0.com"
-      clientId="ZrrSwrP55LW2gRBk3MJIrfugBQnFLuwP"
-      redirectUri={window.location.origin}
-      audience="https://sarah-lewis.netlify.app/admin"
-    >
-      <QueryClientProvider client={queryClient}>
-        <Router>
-          <App />
-        </Router>
-      </QueryClientProvider>
-    </Auth0Provider>
+    // <Auth0Provider
+    //   domain="dev-ty7ee0rngw3ifoyu.us.auth0.com"
+    //   clientId="ZrrSwrP55LW2gRBk3MJIrfugBQnFLuwP"
+    //   redirectUri={window.location.origin}
+    //   audience="https://sarah-lewis.netlify.app/admin"
+    // >
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <App />
+      </Router>
+    </QueryClientProvider>
+    // </Auth0Provider>
   )
 })
