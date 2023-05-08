@@ -3,7 +3,7 @@ import { Project } from '../../models/Project'
 
 const rootUrl: string =
   process.env.NODE_ENV === 'production'
-    ? 'https://sarah-lewis.netlify.app/api/v1'
+    ? 'https://sarah-lewis.netlify.app/.netlify/functions/addProjectApi'
     : 'http://localhost:3000/api/v1'
 
 export async function getProjects(): Promise<Project[]> {
