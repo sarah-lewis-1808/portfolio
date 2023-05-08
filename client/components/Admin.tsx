@@ -3,7 +3,7 @@ import AddProject from './AddProject'
 
 import { useState, useEffect } from 'react'
 
-import { addProject } from '../apis/projects'
+// import { addProject } from '../apis/projects'
 import { useAuth0 } from '@auth0/auth0-react'
 
 type State =
@@ -29,7 +29,7 @@ const Admin = () => {
   const handleAdd = async (newProject: Project) => {
     try {
       const token = await getAccessTokenSilently()
-      const project = await addProject(newProject, token)
+      // const project = await addProject(newProject, token)
 
       setProject(project)
       handleCloseForm()
