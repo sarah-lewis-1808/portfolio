@@ -21,7 +21,7 @@ const projects: Project[] = [
     name: 'ToDo List',
     intro: 'Deployed full stack web app with simple todo list functionality',
     tech: 'Typescript | SCSS | React',
-    link: 'server/public/images/layer-12.svg',
+    link: 'https://sarah-todo-fullstack.devacademy.online/',
     image: 'server/public/images/todo-fullstack.png',
     reflection: [],
   },
