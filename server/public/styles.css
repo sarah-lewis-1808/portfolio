@@ -3,21 +3,20 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family:monospace
 }
 
 .app {  
-   display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    min-height: 100vh;
-    width: 100%;
-    min-width: 40vh;
-    margin: 0px;
-    background-color:#000000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  width: 100%;
+  min-width: 40vh;
+  margin: 0px;
+  background-color:#000000;
+  align-items: center;
 }
-
 
   article {
   width: 100%;
@@ -52,7 +51,7 @@ a {
   width:100%;
   display: flex;
   flex-direction: column;
-  background-color: #AB96DB;
+  background-color: #96c2db;
   padding: 5%;
 }
 
@@ -61,19 +60,21 @@ h1 {
 	font-weight: 300;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	color: black;
-  padding-top: 50px;
-  padding-right: 20px;
-  padding-left: 40px;
+  padding-top: 4%;
+  padding-right: 3%;
+  padding-left: 4%;
   padding-bottom: 0px;
 }
 
-h2{
+#header h2, h3{
+  font-family: monospace;
 	font-size: 1.5em;
   color: #CCF281;
   font-weight: 600;
- padding-left: 40px;
- padding-top:5px;
- padding-bottom:10px;
+  padding-top: 1%;
+  padding-right: 3%;
+  padding-left: 4%;
+  padding-bottom: 0px;
 }
 
 
@@ -97,7 +98,6 @@ nav.hide {
 }
 
 nav a {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300;
   display: flex;
   flex-direction: column;
@@ -215,63 +215,66 @@ nav a:hover {
 
 #about {
   display: flex;
-  flex-flow: row wrap;
   margin-top: 4em;
   width: 70%;
+  font-size:larger;
+  color:whitesmoke;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
   justify-content: center;
-  font-size: 2em;
-  padding: 5px;
+  align-items: center;
 }
 
-.about img { 
-  border-radius: 4%;
-  box-shadow:-15px -15px #4832D5;
-  width: 10em;
-  height: fit-content;
+#about-left {
+  flex: 1;
+  min-width: 20vmax;
+  
 }
 
-.about-me-text{
+#profile-pic img {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: contain;
+}
+
+h3{
+  color:#EC449B;
+}
+
+#bio {
   display: flex;
   flex-flow: column wrap;
-  
-  color:whitesmoke;
-  padding: 10px;
-  justify-content: space-between;
-  min-width: 20vmax;
+  flex: 2;
+  padding: 5%;
+  min-width: 40vmax;
 }
 
-.about-me-text p, .about-me-text h3 {
-  font-size: auto;
-  padding: 8px;
-  font-weight: 200;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.about-me-text h3{
-  color:#EC449B;
+#bio p, h3 {
+  flex-basis: auto;
+  padding: 2%;
 }
 
 /* -------------------PROJECTS---------------- */
 
 #projects{
   display: flex;
-  flex-direction: row;
+  margin-top: 4em;
   width: 70%;
-  align-items: center;
-  margin-top: 7em;
-  margin-bottom: 7em;
-  /* border: 4px solid white; */
+  font-size: larger;
+  color:whitesmoke;
 }
 
 .project {
+  flex: 1;
   margin: 2%;
-  width: 100%;
-  height: 12em;
   background-color: #ab96db95;
   border-radius: 10%;
   padding: 2%;
   box-shadow:-15px -15px #CCF281;
-  font-size: 1.5em;
+  font-size: larger;
 }
 
 .project h3 {
