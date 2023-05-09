@@ -39,18 +39,9 @@
     ]
   },
   "dependencies": {
-    "@netlify/functions": "^1.4.0",
-    "@redux-devtools/extension": "^3.2.3",
     "@types/node": "^14.18.45",
     "express": "^4.17.2",
-    "express-jwt": "^8.4.1",
-    "express-jwt-authz": "^2.4.1",
-    "jwks-rsa": "^3.0.1",
-    "knex": "^2.3.0",
-    "mongodb": "^5.4.0",
     "pg": "^8.8.0",
-    "react-query": "^3.39.3",
-    "scrollmagic": "^2.0.8",
     "sqlite3": "^5.1.2",
     "superagent": "7.1.1"
   },
