@@ -231,7 +231,6 @@ nav a:hover {
 #about-left {
   flex: 1;
   min-width: 20vmax;
-  
 }
 
 #profile-pic img {
@@ -245,7 +244,6 @@ h3{
 }
 
 #bio {
-  display: flex;
   flex-flow: column wrap;
   flex: 2;
   padding: 5%;
@@ -253,39 +251,66 @@ h3{
 }
 
 #bio p, h3 {
-  flex-basis: auto;
   padding: 2%;
 }
 
 /* -------------------PROJECTS---------------- */
 
-#projects{
+#projects {
   display: flex;
   margin-top: 4em;
-  width: 70%;
-  font-size: larger;
+  width: 90%;
   color:whitesmoke;
 }
 
 .project {
+  display:flex;
+  flex-direction: column;
   flex: 1;
-  margin: 2%;
+  margin: 5%;
   background-color: #ab96db95;
-  border-radius: 10%;
-  padding: 2%;
   box-shadow:-15px -15px #CCF281;
-  font-size: larger;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: fit-content;
+  padding: 12px;
+  object-fit: cover;
+}
+
+.project button {
+  margin: 12%;
+  padding: 10%;
+  background-color: aliceblue;
+  box-shadow: #000000;
 }
 
 .project h3 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300;
-  text-align: center;
   color: #EC449B;
 }
 
 .project a {
-  text-decoration: none
+  font-family: monospace;
+  width: 10em;
+  font-weight: 100;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.project img {
+  max-inline-size: 100%;
+  block-size: auto;
+  /* object-fit: contain; */
+  max-width: 40%;
+  margin: 4%
+}
+
+.tech {
+  font-size: smaller;
+  white-space: nowrap;
+  color:#CCF281
 }
 
 /* -------------------CONTACT------------------- */

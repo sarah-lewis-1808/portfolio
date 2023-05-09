@@ -18,7 +18,7 @@ const projects: Project[] = [
     intro: 'Creative portfolio to display my skills and interests',
     tech: 'Typescript | CSS | React',
     link: '#',
-    image: 'server/public/images/portfolio.png',
+    image: '/images/portfolio.png',
     reflection: [
       'I`ve been so excited about knowing so many new skills that I`ve been having trouble deciding what to use to accurately showcase my abilities! ',
     ],
