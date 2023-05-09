@@ -1,10 +1,10 @@
 export interface Project {
-  auth: string
   name: string
   intro: string
+  tech: string
   link: string
   image: string
-  reflection: string
+  reflection: string[]
 }
 
 export interface FullProject extends Project {
